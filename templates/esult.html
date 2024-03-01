@@ -22,6 +22,15 @@
     .progress-animate {
         animation: progressAnimation 4s ease-out forwards;
     }
+
+	    @keyframes countUp {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
 </style>
 
   
@@ -72,19 +81,19 @@
                   {% if result.startswith("Your Stress test result") %}
                       {% if "No Stress" in result %}
                           <div class="progress-bar bg-success progress-animate  progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%; background-color: #FF69B4;" aria-valuenow="20" aria-valuemin="0"  aria-valuemax="100"></div>
-                          <p class="resultpercentage" style="text-align: right; color: white; position: absolute; right: -35px; font-family: 'Monaco', monospace;">22%</p>
+                          <p class="resultpercentage" style="text-align: right; color: white; position: absolute; right: -35px; font-family: 'Monaco', monospace; animation: countUp 7s ease-out;">22%</p>
                       {% elif "Mild Stress" in result %}
                           <div class="progress-bar bg-success progress-animate  progress-bar-striped progress-bar-animated" role="progressbar" style="width: 47%; background-color: #C71585;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                          <p class="resultpercentage" style="text-align: right; color: white; position: absolute; right: -35px; font-family: 'Monaco', monospace;">47%</p>
+                          <p class="resultpercentage" style="text-align: right; color: white; position: absolute; right: -35px; font-family: 'Monaco', monospace; animation: countUp 7s ease-out;">47%</p>
                       {% elif "Moderate Stress" in result %}
                           <div class="progress-bar bg-warning progress-animate  progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;background-color: #CD5C5C;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                          <p class="resultpercentage" style="text-align: right; color: white; position: absolute; right: -35px; font-family: 'Monaco', monospace;">68%</p>
+                          <p class="resultpercentage" style="text-align: right; color: white; position: absolute; right: -35px; font-family: 'Monaco', monospace; animation: countUp 7s ease-out;">68%</p>
                       {% elif "Moderately severe Stress" in result %}
                           <div class="progress-bar bg-warning progress-animate  progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;background-color:red;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                          <p class="resultpercentage" style="text-align: right; color: white; position: absolute; right: -35px; font-family: 'Monaco', monospace;">82%</p>
+                          <p class="resultpercentage" style="text-align: right; color: white; position: absolute; right: -35px; font-family: 'Monaco', monospace; animation: countUp 7s ease-out;">82%</p>
                       {% elif "Severe Stress" in result %}
                           <div class="progress-bar bg-danger progress-animate  progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%;background-color:#800000;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                          <p class="resultpercentage" style="text-align: right; color: white; position: absolute; right: -35px; font-family: 'Monaco', monospace;">94%</p>
+                          <p class="resultpercentage" style="text-align: right; color: white; position: absolute; right: -35px; font-family: 'Monaco', monospace; animation: countUp 7s ease-out;">94%</p>
                           {% endif %}
                   {% endif %}
               </div>
